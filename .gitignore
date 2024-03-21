@@ -11,6 +11,9 @@
 npm-debug.log
 yarn-error.log
 
+#NPM
+/projects/emma-design-system/.npmrc
+
 # IDEs and editors
 .idea/
 .project
