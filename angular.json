@@ -3,5 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "emma-design-system": {
+      "projectType": "library",
+      "root": "projects/emma-design-system",
+      "sourceRoot": "projects/emma-design-system/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/emma-design-system/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/emma-design-system/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/emma-design-system/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/emma-design-system/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
   }
 }
